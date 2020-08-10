@@ -1,0 +1,37 @@
+{
+  "id": "1995557",
+  "name": "vue-shopin",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2531500",
+      "name": "不可见",
+      "font_class": "bukejian",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "5196429",
+      "name": "可见 ",
+      "font_class": "kejian1",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "5206477",
+      "name": "锁",
+      "font_class": "suo",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "11518443",
+      "name": "账号",
+      "font_class": "zhanghao",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    }
+  ]
+}
