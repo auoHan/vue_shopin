@@ -3,7 +3,7 @@
     <div class="login_box">
       <!-- 头像区域 -->
       <div class="avatar_box">
-        <img src="../assets/img/logo.png" alt="vue" title="vue" />
+        <img src="~assets/img/logo.png" alt="vue" title="vue" />
       </div>
       <!-- 登录表单区域 -->
       <!-- 
@@ -24,29 +24,18 @@
           v-model把数据在文本框中进行动态展示
         -->
         <el-form-item prop="username">
-          <el-input
-            prefix-icon="iconfont icon-zhanghao"
-            v-model="loginForm.username"
-          ></el-input>
+          <el-input prefix-icon="iconfont icon-zhanghao" v-model="loginForm.username"></el-input>
         </el-form-item>
         <!-- 密码区域 -->
         <!-- 增加一个密码可见和不可见功能 -->
         <!-- 不可见密码 -->
         <el-form-item v-if="!isDisplay" prop="password">
-          <el-input
-            prefix-icon="iconfont icon-suo"
-            v-model="loginForm.password"
-            type="password"
-          ></el-input>
+          <el-input prefix-icon="iconfont icon-suo" v-model="loginForm.password" type="password"></el-input>
           <i class="iconfont icon-bukejian see" @click="showPass"></i>
         </el-form-item>
         <!-- 可见密码 -->
         <el-form-item v-else prop="password">
-          <el-input
-            prefix-icon="iconfont icon-suo"
-            v-model="loginForm.password"
-            type="text"
-          ></el-input>
+          <el-input prefix-icon="iconfont icon-suo" v-model="loginForm.password" type="text"></el-input>
           <i class="iconfont icon-kejian1 see" @click="showPass"></i>
         </el-form-item>
         <el-form-item class="btns">
@@ -142,12 +131,12 @@ export default {
   components: {},
 };
 </script>
-
 <style lang="less" scoped>
 .login_container {
   height: 100%;
   background-color: #2b4b6b;
 }
+
 .login_box {
   width: 450px;
   height: 300px;
@@ -157,6 +146,7 @@ export default {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
   .avatar_box {
     width: 130px;
     height: 130px;
@@ -169,6 +159,7 @@ export default {
     border-radius: 50%;
     box-shadow: 0 0 10px #ddd;
     background-color: #fff;
+
     img {
       width: 100%;
       height: 100%;
@@ -177,22 +168,26 @@ export default {
     }
   }
 }
+
 .el-form {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
+
   .see {
     position: absolute;
     right: 10px;
     top: 2px;
   }
+
   /deep/ .el-input__inner {
     //修改ele自带样式
     padding: 0 30px;
   }
 }
+
 .btns {
   display: flex;
   justify-content: flex-end;
