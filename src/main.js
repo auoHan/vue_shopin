@@ -20,6 +20,7 @@ axios.interceptors.request.use(config => {
 })
 //挂载到vue的原型对象上，至此每一个组件都可以用this直接调用$http去发起axios请求
 Vue.prototype.$http = axios;
+
 Vue.config.productionTip = false;
 
 new Vue({
