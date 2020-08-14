@@ -12,7 +12,9 @@
       <!-- 添加分类 -->
       <el-row>
         <el-col>
-          <el-button type="primary" @click="showAddCateDialog">添加分类</el-button>
+          <el-button type="primary" @click="showAddCateDialog"
+            >添加分类</el-button
+          >
         </el-col>
       </el-row>
 
@@ -29,13 +31,19 @@
       >
         <!-- 显示是否有效列 -->
         <template v-slot:isok="scope">
-          <i class="el-icon-success" v-if="!scope.row.cat_deleted" style="color:lightgreen"></i>
+          <i
+            class="el-icon-success"
+            v-if="!scope.row.cat_deleted"
+            style="color:lightgreen"
+          ></i>
           <i class="el-icon-error" v-else style="color:red"></i>
         </template>
         <!-- 排序列 -->
         <template v-slot:order="scope">
           <el-tag v-if="scope.row.cat_level === 0">一级</el-tag>
-          <el-tag type="success" v-else-if="scope.row.cat_level === 1">二级</el-tag>
+          <el-tag type="success" v-else-if="scope.row.cat_level === 1"
+            >二级</el-tag
+          >
           <el-tag type="warning" v-else>三级</el-tag>
         </template>
         <!-- 操作列 -->
@@ -45,18 +53,25 @@
             size="small"
             class="el-icon-setting"
             @click="showEditDialog(scope.row.cat_id)"
-          >编辑</el-button>
+            >编辑</el-button
+          >
           <el-button
             type="danger"
             size="small"
             class="el-icon-delete"
             @click="removeCateById(scope.row.cat_id, scope.row.cat_name)"
-          >删除</el-button>
+            >删除</el-button
+          >
         </template>
       </tree-table>
 
       <!-- 添加分类的弹框 -->
-      <el-dialog title="添加分类" :visible.sync="addDialogVisible" width="50%" @close="addDialogClosed">
+      <el-dialog
+        title="添加分类"
+        :visible.sync="addDialogVisible"
+        width="50%"
+        @close="addDialogClosed"
+      >
         <el-form
           :model="addForm"
           :rules="addFormRules"
@@ -80,13 +95,20 @@
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
-          <el-button type="primary" @click="addCate" native-type="submit">确 定</el-button>
+          <el-button type="primary" @click="addCate" native-type="submit"
+            >确 定</el-button
+          >
           <el-button @click="addDialogVisible = false">取 消</el-button>
         </span>
       </el-dialog>
 
       <!-- 编辑弹框 -->
-      <el-dialog title="编辑" :visible.sync="editDialogVisible" width="50%" @close="editDialogClosed">
+      <el-dialog
+        title="编辑"
+        :visible.sync="editDialogVisible"
+        width="50%"
+        @close="editDialogClosed"
+      >
         <el-form
           :model="editForm"
           :rules="editFormRules"
@@ -100,7 +122,9 @@
           </el-form-item>
         </el-form>
         <span slot="footer" class="dialog-footer">
-          <el-button type="primary" @click="editCate" native-type="submit">确 定</el-button>
+          <el-button type="primary" @click="editCate" native-type="submit"
+            >确 定</el-button
+          >
           <el-button @click="editDialogVisible = false">取 消</el-button>
         </span>
       </el-dialog>
@@ -216,7 +240,7 @@ export default {
         params: this.queryInfo,
       });
       if (res.meta.status !== 200) return this.$message.error(res.meta.msg);
-      console.log(res);
+      //console.log(res);
       //把数据列表赋值给catelist
       this.catelist = res.data.result;
       //把总条数赋值给total
