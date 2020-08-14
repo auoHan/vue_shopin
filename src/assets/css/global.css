@@ -27,3 +27,15 @@ body,
 body .el-table th.gutter {
   display: table-cell !important;
 }
+
+body .zk-table th.gutter {
+  display: table-cell !important;
+}
+
+.zk-table {
+  margin-top: 15px;
+}
+
+.el-cascader-panel {
+  height: 300px;
+}
