@@ -38,6 +38,14 @@ const routes = [{
       {
         path: "/params",
         component: () => import("views/goods/Params.vue")
+      },
+      {
+        path: "/goods",
+        component: () => import("views/goods/List.vue")
+      },
+      {
+        path: "/goods/add",
+        component: () => import("views/goods/Add.vue")
       }
     ]
   },
