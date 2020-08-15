@@ -37,8 +37,11 @@ import {
   CheckboxGroup,
   Checkbox,
   Upload,
-  InputNumber
+  InputNumber,
 } from "element-ui";
+
+import Timeline from 'plugins/timeline/index.js'
+import TimelineItem from 'plugins/timeline-item/index.js'
 
 Vue.use(Button);
 Vue.use(Form);
@@ -76,6 +79,8 @@ Vue.use(CheckboxGroup);
 Vue.use(Checkbox);
 Vue.use(Upload);
 Vue.use(InputNumber);
+Vue.use(Timeline)
+Vue.use(TimelineItem)
 //下面的只需挂载，让this进行调用
 Vue.prototype.$message = Message;
 Vue.prototype.$confirm = MessageBox.confirm;
